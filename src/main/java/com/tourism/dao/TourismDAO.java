@@ -46,7 +46,7 @@ public class TourismDAO {
 
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Desgination.class);
-		criteria.add(Restrictions.sqlRestriction("1=1 order by rand() "));
+		criteria.add(Restrictions.sqlRestriction("1=1 order by RANDOM() "));
 		criteria.setMaxResults(7);
 		return criteria.list();
 	}
