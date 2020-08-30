@@ -1,7 +1,12 @@
 package com.tourism.config;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Properties;
 
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -35,14 +40,13 @@ public class AppConfig {
 		properties.put(URL, environment.getProperty("spring.datasource.url"));
 		properties.put(USER, environment.getProperty("spring.datasource.username"));
 		properties.put(PASS, environment.getProperty("spring.datasource.password"));
-		
+
 		System.out.println("SPRING MVC");
 		System.out.println(environment.getProperty("spring.datasource.driverClassName"));
 		System.out.println(environment.getProperty("spring.datasource.url"));
 		System.out.println(environment.getProperty("spring.datasource.username"));
 		System.out.println(environment.getProperty("spring.datasource.password"));
 		System.out.println("End");
-		
 
 		properties.put(SHOW_SQL, environment.getProperty("spring.jpa.show-sql"));
 		properties.put(HBM2DDL_AUTO, environment.getProperty("spring.jpa.hibernate.ddl-auto"));
@@ -58,14 +62,40 @@ public class AppConfig {
 
 		return factoryBean;
 	}
-	
+
 	@Bean
 	public HibernateTransactionManager getTransactionManager() {
 		System.out.println("SPRING MVC");
-		HibernateTransactionManager transactionManager=new HibernateTransactionManager();
+		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
 		transactionManager.setSessionFactory(getSessionFactory().getObject());
+		try {
+			transactionManager.setSessionFactory(((FactoryBean<SessionFactory>) dataSource()).getObject());
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return transactionManager;
-		
+
+	}
+
+	@Bean
+	public BasicDataSource dataSource() throws URISyntaxException {
+		URI dbUri = new URI(System.getenv("DATABASE_URL"));
+
+		String username = dbUri.getUserInfo().split(":")[0];
+		String password = dbUri.getUserInfo().split(":")[1];
+		String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath()
+				+ "?sslmode=require";
+
+		BasicDataSource basicDataSource = new BasicDataSource();
+		basicDataSource.setUrl(dbUrl);
+		basicDataSource.setUsername(username);
+		basicDataSource.setPassword(password);
+
+		return basicDataSource;
 	}
 
 }

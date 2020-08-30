@@ -1,140 +1,231 @@
-<%-- 
-    Document   : contact
-    Created on : 9 May, 2020, 9:41:08 PM
-    Author     : Acer
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="header.jsp" %>
 <!DOCTYPE html>
+<%@include file="header.jsp"%>
 <html lang="en">
 
-<head>
+    <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+        <title>Stylish Portfolio - Start Bootstrap Template</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/modern-business.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+              type="text/css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+            rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css"
+              rel="stylesheet">
 
-</head>
+        <!-- Custom CSS -->
+        <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
-<body>
-<br><br>
+    </head>
 
-  <!-- Page Content -->
-  <div class="container">
+    <body id="page-top">
+        <div>
+            <br><br>
+            <!-- Portfolio -->
+            <section class="content" id="portfolio">
+                <div class="container">
+                    <div class="content-section-heading text-left ">
+                        <h2 class="font-weight-normal mb-4">Categories Of Travel Destinations</h2>
+                    </div>
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Contact
-      <small>Subheading</small>
-    </h1>
+                    <div class="row no-gutters" >
+                        <div class="col-lg-4">
+                            <a class="portfolio-item" href="grouped-items.jsp">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <div class="h2" style="color:white;">Temples</div>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div> <img class="img-fluid"  src="img/Parvati-Hill.jpg" alt="">
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Contact</li>
-    </ol>
+                            </a>
+                        </div>
 
-    <!-- Content Row -->
-    <div class="row">
-      <!-- Map Column -->
-      <div class="col-lg-8 mb-4">
-        <!-- Embedded Google Map -->
-        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-      </div>
-      <!-- Contact Details Column -->
-      <div class="col-lg-4 mb-4">
-        <h3>Contact Details</h3>
-        <p>
-          3481 Melrose Place
-          <br>Beverly Hills, CA 90210
-          <br>
-        </p>
-        <p>
-          <abbr title="Phone">P</abbr>: (123) 456-7890
-        </p>
-        <p>
-          <abbr title="Email">E</abbr>:
-          <a href="mailto:name@example.com">name@example.com
-          </a>
-        </p>
-        <p>
-          <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
-        </p>
-      </div>
-    </div>
-    <!-- /.row -->
+                        <div class="col-lg-4">
+                            <a class="portfolio-item" href="#!">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <div class="h2">Forts</div>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div> <img class="img-fluid"  src="img/sinhagad-fort.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="portfolio-item" href="#!">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <div class="h2">Historic Places</div>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div> <img class="img-fluid" src="img/shaniwar-wada.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="portfolio-item" href="#!">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <div class="h2">Dams</div>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div> <img class="img-fluid"  src="img/khadakwasla-dam.jpg" alt="">
+                            </a>
+                        </div>
 
-    <!-- Contact Form -->
-    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <div class="row">
-      <div class="col-lg-8 mb-4">
-        <h3>Send us a Message</h3>
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Full Name:</label>
-              <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-              <p class="help-block"></p>
+                        <div class="col-lg-4">
+                            <a class="portfolio-item" href="#!">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <div class="h2">Hills</div>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div> <img class="img-fluid"  src="img/Khandala.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="portfolio-item" href="#!">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <div class="h2">Parks</div>
+                                        <p class="mb-0"></p>
+                                    </div>
+                                </div> <img class="img-fluid"  src="img/appu_ghar.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div>
+            <div class="container">
+                <ol class="breadcrumb bg-info" style="color: white;" >
+                    <li class="breadcrumb-item active" style="color: white;" ><h2>Must Visit Places in Pune</h2></li>
+                </ol>
             </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Phone Number:</label>
-              <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+        </div>
+        <br><br>
+
+
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="single-item.jsp"><img class="card-img-top" src="img/khadakwasla-dam.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="single-item.jsp">Project One</a>
+                        </h4>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Email Address:</label>
-              <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/shaniwar-wada.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Two</a>
+                        </h4>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Message:</label>
-              <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/Parvati-Hill.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Three</a>
+                        </h4>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div id="success"></div>
-          <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
-        </form>
-      </div>
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/khadakwasla-dam.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Four</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/Parvati-Hill.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Four</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/shaniwar-wada.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Four</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/khadakwasla-dam.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Four</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="img/Parvati-Hill.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Project Four</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </div>
-    <!-- /.row -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-  </div>
-  <!-- /.container -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+       <!-- Plugin JavaScript -->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+	<!-- Custom scripts for this template -->
+	<script src="js/stylish-portfolio.min.js"></script>
+        <br><br>
+        <hr>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <%@include file="footer.jsp"%>
 
-  <!-- Contact form JavaScript -->
-  <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-
-</body>
+    </body>
 
 </html>
 
