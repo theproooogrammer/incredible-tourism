@@ -35,6 +35,14 @@ public class AppConfig {
 		properties.put(URL, environment.getProperty("spring.datasource.url"));
 		properties.put(USER, environment.getProperty("spring.datasource.username"));
 		properties.put(PASS, environment.getProperty("spring.datasource.password"));
+		
+		System.out.println("SPRING MVC");
+		System.out.println(environment.getProperty("spring.datasource.driverClassName"));
+		System.out.println(environment.getProperty("spring.datasource.url"));
+		System.out.println(environment.getProperty("spring.datasource.username"));
+		System.out.println(environment.getProperty("spring.datasource.password"));
+		System.out.println("End");
+		
 
 		properties.put(SHOW_SQL, environment.getProperty("spring.jpa.show-sql"));
 		properties.put(HBM2DDL_AUTO, environment.getProperty("spring.jpa.hibernate.ddl-auto"));
