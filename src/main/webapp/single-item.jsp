@@ -43,7 +43,7 @@
 
 			<li class="breadcrumb-item text-capitalize"><a
 				style="color: white; font-family: serif;"
-				href="<c:url value='/tag-'${desginationDTO.primaryTag}></c:url>">${desginationDTO.primaryTag}</a></li>
+				href="<c:url value='/tag-${desginationDTO.primaryTag}'></c:url>">${desginationDTO.primaryTag}</a></li>
 
 			<li class="breadcrumb-item active text-capitalize"
 				style="color: white; font-family: serif;">${desginationDTO.destName }</li>
