@@ -1,10 +1,12 @@
 package com.tourism.dao;
 
 import java.util.List;
+import java.util.Random;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.ProjectionList;
 import org.hibernate.criterion.Projections;
@@ -24,9 +26,27 @@ public class TourismDAO {
 
 	public List<Desgination> get8RandomDest() {
 
+		/*
+		 * Object result = null; Session session = sessionFactory.getCurrentSession();
+		 * Criteria criteria = session.createCriteria(Desgination.class);
+		 * 
+		 * criteria.add(Restrictions.sqlRestriction(""));
+		 * criteria.setProjection(Projections.rowCount());
+		 * 
+		 * int count = ((Number) criteria.uniqueResult()).intValue(); if (0 != count) {
+		 * int index = new Random().nextInt(count); criteria =
+		 * session.createCriteria(Desgination.class);
+		 * criteria.add(Restrictions.sqlRestriction("")); result =
+		 * criteria.setFirstResult(index).setMaxResults(7).uniqueResult(); }
+		 * 
+		 * 
+		 * //criteria.add(Restrictions.sqlRestriction("1=1 order RANDOM() "));
+		 * //criteria.setMaxResults(7); return (List<Desgination>) result;
+		 */
+
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Desgination.class);
-		criteria.add(Restrictions.sqlRestriction("1=1 order RANDOM() "));
+		criteria.add(Restrictions.sqlRestriction("1=1 order by rand() "));
 		criteria.setMaxResults(7);
 		return criteria.list();
 	}
@@ -83,14 +103,14 @@ public class TourismDAO {
 		return criteria.list();
 	}
 
-	public List<Desgination> recommedation(String tag){
-		Session session=sessionFactory.getCurrentSession();
-		Criteria criteria=session.createCriteria(Desgination.class);
+	public List<Desgination> recommedation(String tag) {
+		Session session = sessionFactory.getCurrentSession();
+		Criteria criteria = session.createCriteria(Desgination.class);
 		criteria.add(Restrictions.eq("primaryTag", tag));
 		criteria.add(Restrictions.sqlRestriction("1=1 order RANDOM() "));
 		criteria.setMaxResults(4);
 		return criteria.list();
-		
+
 	}
 	// ==========================================================
 	// CURD OPRATIONS
@@ -159,10 +179,10 @@ public class TourismDAO {
 		oldDesg.setSecondaryTag(desgination.getSecondaryTag());
 		session.flush();
 	}
-	
+
 	public void deleteDestination(long id) {
-		Session session=sessionFactory.getCurrentSession();
-		Desgination desgination=session.get(Desgination.class, id);
+		Session session = sessionFactory.getCurrentSession();
+		Desgination desgination = session.get(Desgination.class, id);
 		session.delete(desgination);
 	}
 }
