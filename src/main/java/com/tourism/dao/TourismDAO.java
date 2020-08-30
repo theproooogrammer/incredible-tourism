@@ -56,7 +56,7 @@ public class TourismDAO {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Desgination.class);
 		criteria.add(Restrictions.eq("primaryTag", tag));
-		criteria.add(Restrictions.sqlRestriction("1=1 order RANDOM() "));
+		criteria.add(Restrictions.sqlRestriction("1=1 order by RANDOM() "));
 		criteria.setMaxResults(1);
 
 		return criteria.list();
@@ -107,7 +107,7 @@ public class TourismDAO {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Desgination.class);
 		criteria.add(Restrictions.eq("primaryTag", tag));
-		criteria.add(Restrictions.sqlRestriction("1=1 order RANDOM() "));
+		criteria.add(Restrictions.sqlRestriction("1=1 order by RANDOM() "));
 		criteria.setMaxResults(4);
 		return criteria.list();
 
