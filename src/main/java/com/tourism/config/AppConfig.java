@@ -27,7 +27,7 @@ public class AppConfig {
 
 	@Bean
 	public LocalSessionFactoryBean getSessionFactory() {
-
+		System.out.println("SPRING MVC");
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 
 		Properties properties = new Properties();
@@ -61,6 +61,7 @@ public class AppConfig {
 	
 	@Bean
 	public HibernateTransactionManager getTransactionManager() {
+		System.out.println("SPRING MVC");
 		HibernateTransactionManager transactionManager=new HibernateTransactionManager();
 		transactionManager.setSessionFactory(getSessionFactory().getObject());
 		return transactionManager;
