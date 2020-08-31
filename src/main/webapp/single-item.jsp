@@ -107,7 +107,7 @@
 						<!-- Embedded Google Map -->
 						<iframe width="100%" height="400px" frameborder="0" scrolling="no"
 							marginheight="0" marginwidth="0"
-							src="https://www.google.com/maps/embed?pb=${desginationDTO.maps}"></iframe>
+							src="https://www.google.com/maps/embed?pb='${desginationDTO.maps}' "></iframe>
 					</div>
 
 				</div>

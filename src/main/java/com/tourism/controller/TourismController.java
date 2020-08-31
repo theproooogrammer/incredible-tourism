@@ -108,7 +108,7 @@ public class TourismController {
 			desginationDTO.setOtherImage3(desgination2.getOtherImage3());
 			desginationDTO.setOtherImage4(desgination2.getOtherImage4());
 			
-			desginationDTO.setOtherImage4(desgination2.getMaps());
+			desginationDTO.setMaps(desgination2.getMaps());
 		}
 		/*
 		 * System.out.println("singleItemPage  " + desginationDTO.getDestName());
