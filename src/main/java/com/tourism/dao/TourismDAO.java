@@ -26,24 +26,6 @@ public class TourismDAO {
 
 	public List<Desgination> get8RandomDest() {
 
-		/*
-		 * Object result = null; Session session = sessionFactory.getCurrentSession();
-		 * Criteria criteria = session.createCriteria(Desgination.class);
-		 * 
-		 * criteria.add(Restrictions.sqlRestriction(""));
-		 * criteria.setProjection(Projections.rowCount());
-		 * 
-		 * int count = ((Number) criteria.uniqueResult()).intValue(); if (0 != count) {
-		 * int index = new Random().nextInt(count); criteria =
-		 * session.createCriteria(Desgination.class);
-		 * criteria.add(Restrictions.sqlRestriction("")); result =
-		 * criteria.setFirstResult(index).setMaxResults(7).uniqueResult(); }
-		 * 
-		 * 
-		 * //criteria.add(Restrictions.sqlRestriction("1=1 order RANDOM() "));
-		 * //criteria.setMaxResults(7); return (List<Desgination>) result;
-		 */
-
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Desgination.class);
 		criteria.add(Restrictions.sqlRestriction("1=1 order by RANDOM() "));

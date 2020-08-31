@@ -107,7 +107,7 @@
 						<!-- Embedded Google Map -->
 						<iframe width="100%" height="400px" frameborder="0" scrolling="no"
 							marginheight="0" marginwidth="0"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7567.560742652323!2d73.83991297278554!3d18.493604999698604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c007d06676ad%3A0xf1c3e7cac53c6661!2sParvati%20Hill!5e0!3m2!1sen!2sca!4v1598201837447!5m2!1sen!2sca"></iframe>
+							src="https://www.google.com/maps/embed?pb=${desginationDTO.maps}"></iframe>
 					</div>
 
 				</div>
