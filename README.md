@@ -16,3 +16,14 @@
 ![Screenshot (380)](https://user-images.githubusercontent.com/60536632/116575471-4b2fa180-a92c-11eb-97fe-9c5078701ced.png)
 
 ![Screenshot (379)](https://user-images.githubusercontent.com/60536632/116575499-5256af80-a92c-11eb-8707-a472830452a0.png)
+
+
+## Admin Pages :
+
+![Screenshot (381)](https://user-images.githubusercontent.com/60536632/116576263-06f0d100-a92d-11eb-925f-7c851dcb36ad.png)
+
+***Add Destination***
+![Screenshot (382)](https://user-images.githubusercontent.com/60536632/116576298-0eb07580-a92d-11eb-8838-2d63889e973b.png)
+
+***Update Destination***
+![Screenshot (383)](https://user-images.githubusercontent.com/60536632/116576330-1708b080-a92d-11eb-9400-0e1ee3c12984.png)
